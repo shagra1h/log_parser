@@ -38,7 +38,7 @@ if __name__ == '__main__':
         out_uniq_ips_and_steamids.close()
         input_file.close()
         path = os.getcwd()
-        print("Успешно! Отсортированные файлы join_log_uniq_steamids.txt, join_log_uniq_ips.txt и join_log_uniq_ips_and_steamids.txt находятся в папке", path)
+        print("Успешно! Отсортированные файлы: \njoin_log_uniq_steamids.txt,\njoin_log_uniq_ips.txt\njoin_log_uniq_ips_and_steamids.txt\nнаходятся в папке", path)
     else:
         print("Ошибка! Введите корректный путь и попробуйте еще раз!")
         sys.exit(0)
