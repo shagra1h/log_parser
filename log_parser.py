@@ -1,5 +1,6 @@
 import sys
 import os.path
+import os
 
 
 def check_path(filepath):
@@ -36,6 +37,8 @@ if __name__ == '__main__':
         out_uniq_ips.close()
         out_uniq_ips_and_steamids.close()
         input_file.close()
+        path = os.getcwd()
+        print("Успешно! Отсортированные файлы join_log_uniq_steamids.txt, join_log_uniq_ips.txt и join_log_uniq_ips_and_steamids.txt находятся в папке", path)
     else:
         print("Ошибка! Введите корректный путь и попробуйте еще раз!")
         sys.exit(0)
