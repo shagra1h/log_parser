@@ -12,7 +12,7 @@ if __name__ == '__main__':
     else:
         print("Необходимо указать путь к файлу!")
         sys.exit(0)
-    if check_path(input_file):
+    if check_path(path_to_file):
         input_file = open(path_to_file, 'r')
         out_uniq_steamids = open('join_log_uniq_steamids.txt', 'w')
         out_uniq_ips = open('join_log_uniq_ips.txt', 'w')
