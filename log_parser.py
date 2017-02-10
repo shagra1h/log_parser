@@ -8,12 +8,12 @@ def check_path(filepath):
 
 if __name__ == '__main__':
     if len(sys.argv) == 2:
-        input_file = sys.argv[1]
+        path_to_file = sys.argv[1]
     else:
         print("Необходимо указать путь к файлу!")
         sys.exit(0)
     if check_path(input_file):
-        input_file = open(input_file, 'r')
+        input_file = open(path_to_file, 'r')
         out_uniq_steamids = open('join_log_uniq_steamids.txt', 'w')
         out_uniq_ips = open('join_log_uniq_ips.txt', 'w')
         out_uniq_ips_and_steamids = open('join_log_uniq_ips_and_steamids.txt', 'w')
