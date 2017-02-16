@@ -6,16 +6,16 @@ from datetime import datetime
 
 def write_to_file(uniqIps, uniqSteamids, uniqIpsAndSteamids):
     output_filename = 'results_' + datetime.now().strftime("%d_%m_%Y") + '.txt'
-    output_file = open(output_filename, 'w')
-    output_file.write(" Уникальных steamid : " + str(uniqSteamids) + '\n')
-    output_file.write(" Уникальных ip : " + str(uniqIps) + '\n')
-    output_file.write(" Уникальных комбинаций steamid + ip : " + str(uniqIpsAndSteamids))
+    output_file = open(output_filename, 'w', encoding='cp866')
+    output_file.write("Уникальных steamid : " + str(uniqSteamids) + '\n')
+    output_file.write("Уникальных ip : " + str(uniqIps) + '\n')
+    output_file.write('Уникальных комбинаций steamid + ip : ' + str(uniqIpsAndSteamids))
     output_file.close()
     print("Успешно! результаты в файле", output_filename)
 
 
 if __name__ == '__main__':
-    input_file = open('join_log.log', 'r')
+    input_file = open('join_log.log', 'r', encoding='utf-8')
     uniq_steamids = 0
     uniq_ips = 0
     uniq_ips_and_steamids = 0
